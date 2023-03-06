@@ -4,7 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>SignUp</title>
   </head>
-  <body></body>
+  <body>
+    <form id="signupForm" onsubmit="return validateForm()">
+      <h2 class="heading">SignUp</h2>
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        name="username"
+        placeholder="Enter your username"
+        required
+      />
+
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter your password"
+        minlength="8"
+        required
+      />
+
+      <label for="confirm_password">Confirm Password</label>
+      <input
+        type="password"
+        id="confirm_password"
+        name="confirm_password"
+        placeholder="Confirm your password"
+        minlength="8"
+        required
+      />
+
+      <input type="submit" value="Submit" />
+      <div id="message"></div>
+    </form>
+    <script src="./js/app.js"></script>
+  </body>
 </html>
